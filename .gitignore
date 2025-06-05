@@ -1,0 +1,15 @@
+# Ambiente virtual
+venv/
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos de sistema
+.DS_Store
+
+# Configurações de IDEs
+.vscode/
+*.code-workspace
+.idea/

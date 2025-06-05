@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ouvir Para Ver</title>
+
+  <!-- Bootstrap CSS (v5.3.0) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome (ícones) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+  />
+
+  <!-- Google Fonts (Roboto) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Arquivo de estilos customizados -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <!-- Header com ícones de olhos e ouvidos -->
+  <header class="bg-primary text-white py-3 shadow-sm">
+    <div class="container d-flex align-items-center">
+      <h1 class="h3 m-0">
+        <i class="fas fa-eye me-2"></i>
+        <i class="fas fa-ear-listen me-2"></i>
+        Ouvir Para Ver
+      </h1>
+      <p class="ms-auto mb-0 fst-italic">Transforme imagens em palavras</p>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="flex-grow-1">
+    <div class="container py-5">
+      <!-- Card de upload -->
+      <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body p-4">
+          <h2 class="card-title mb-3">Selecione uma imagem</h2>
+          <div class="mb-3">
+            <input
+              id="imgInput"
+              type="file"
+              accept="image/*"
+              class="form-control"
+            />
+          </div>
+          <button id="btnSend" class="btn btn-success btn-lg w-100">
+            Gerar
+          </button>
+        </div>
+      </div>
+
+      <!-- Card de resultado -->
+      <div id="result" class="mt-4">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4">
+            <h3 class="card-title mb-3">Legenda</h3>
+            <p id="caption" class="fs-5 fst-italic text-secondary">
+              Nenhuma legenda ainda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center text-muted py-3 mt-auto">
+    <small>
+      © 2025 Projeto “Ouvir Para Ver”.
+      <a
+        href="https://huggingface.co/spaces/mileskidev/ouvir-para-ver"
+        target="_blank"
+      >
+        Space no Hugging Face
+      </a>
+    </small>
+  </footer>
+
+  <!-- Script principal (módulo ES) -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

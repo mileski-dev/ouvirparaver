@@ -4,12 +4,12 @@
 import { Client } from "https://cdn.jsdelivr.net/npm/@gradio/client@latest/dist/index.min.js";
 
 async function setupClient() {
-  // Conecta ao Space público; sem hfToken, pois é público
+  // Conecta ao Space público
   return await Client.connect("mileskidev/ouvir-para-ver");
 }
 
 async function resizeImageToBlob(file) {
-  // 1) Carrega o arquivo em objeto Image
+  // 1) Carrega o arquivo 
   const img = await new Promise((resolve, reject) => {
     const url = URL.createObjectURL(file);
     const image = new Image();
@@ -37,7 +37,7 @@ async function resizeImageToBlob(file) {
   const ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0, width, height);
 
-  // 4) Converte canvas para Blob JPEG (qualidade 0.8)
+  // 4) Converte 
   return await new Promise((resolve) => {
     canvas.toBlob(
       (blob) => resolve(blob),
@@ -47,7 +47,7 @@ async function resizeImageToBlob(file) {
   });
 }
 
-// Event listener do botão "Gerar Legenda"
+// Event listener 
 document.getElementById("btnSend").addEventListener("click", async () => {
   const input = document.getElementById("imgInput");
   if (!input.files || input.files.length === 0) {
